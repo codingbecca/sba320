@@ -1,1 +1,11 @@
 @import "tailwindcss";
+
+body{
+  background-color: aliceblue;
+}
+
+.bookshelf {
+  background-image: url('./assets/brickwall.jpg');
+  background-size: cover;
+  padding-bottom: 20px;
+}
