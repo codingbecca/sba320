@@ -4,8 +4,19 @@ body{
   background-color: aliceblue;
 }
 
+.book{
+  width: 130px;
+}
+
 .bookshelf {
   background-image: url('./assets/brickwall.jpg');
   background-size: cover;
   padding-bottom: 20px;
+}
+
+.paginationContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }

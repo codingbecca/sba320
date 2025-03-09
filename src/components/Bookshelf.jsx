@@ -24,7 +24,7 @@ export default function Bookshelf({ bookshelf, dispatch }) {
         {bookshelf.map((book) => (
           <div
             onClick={() => handleClick(book)}
-            key={book.volumeInfo.industryIdentifiers[0]["identifier"]}
+            key={book.id}
           >
             <Book
               thumbnail={book.volumeInfo.imageLinks.thumbnail}
@@ -33,12 +33,13 @@ export default function Bookshelf({ bookshelf, dispatch }) {
           </div>
         ))}
       </div>
+      {bookshelf.length > 0 && 
       <button
         onClick={() => reactToPrintFn()}
-        className="border rounded-sm px-2 mb-5 self-center "
+        className="border rounded-sm px-2 mb-5 self-center cursor-pointer hover:bg-blue-900 hover:text-blue-100 "
       >
         print bookshelf
-      </button>
+      </button>}
     </div>
   );
 }
