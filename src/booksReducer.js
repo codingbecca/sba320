@@ -3,7 +3,7 @@ export default function reducer(state, action) {
         case 'add_to_shelf':
             return [action.payload, ...state];
         case 'remove_from_shelf':
-            return state.filter(book => book.volumeInfo.industryIdentifiers[0]['identifier'] !== action.payload.volumeInfo.industryIdentifiers[0]['identifier'])
+            return state.filter(book => book.id !== action.payload.id)
     
         default:
             break;

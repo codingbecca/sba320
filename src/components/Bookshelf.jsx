@@ -27,7 +27,7 @@ export default function Bookshelf({ bookshelf, dispatch }) {
             key={book.id}
           >
             <Book
-              thumbnail={book.volumeInfo.imageLinks.thumbnail}
+              thumbnail={book.volumeInfo.imageLinks?.thumbnail}
               title={book.volumeInfo.title}
             />
           </div>
