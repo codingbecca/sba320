@@ -18,20 +18,24 @@ export default function SearchBar(props) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const res = await axios.get(
-      `https://www.googleapis.com/books/v1/volumes?q=${searchRefinement}${encodeURIComponent(
-        searchTerm
-      )}`
-    );
-    setBooks(res.data.items);
-    setSearchQuery({
-      term: searchTerm,
-      refinement: searchRefinement,
-    });
-    setSearchTerm("");
-    setSearchRefinement("");
+    try {
+      const res = await axios.get(
+        `https://www.googleapis.com/books/v1/volumes?q=${searchRefinement}${encodeURIComponent(
+          searchTerm
+        )}`
+      );
+      setBooks(res.data.items);
+      setSearchQuery({
+        term: searchTerm,
+        refinement: searchRefinement,
+      });
+      setSearchTerm("");
+      setSearchRefinement("");
+    } catch (e) {
+      console.error(e);
+    }
   };
-  
+
   //functions to handle pagination
   const getPaginatedData = async (pageNumber) => {
     try {
@@ -77,7 +81,6 @@ export default function SearchBar(props) {
       getPaginatedData(currentPage);
     }
   };
-
 
   return (
     <div>
