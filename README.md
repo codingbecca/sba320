@@ -1,12 +1,20 @@
-# React + Vite
+# SBA 320 - A Shelfie Generator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A skills-based assessment for Per Scholas.
+A simple one page React application that allows users to search via the Google Books API to retrieve cover images of books, add them to a 'shelf' section of the page and then print that shelf of books.
+Use Case: keeping track of a to-be-read list, books owned, or books read in a certain period of time. 
+[live site link](https://generate-shelfie.netlify.app/)
 
-Currently, two official plugins are available:
+## Usage Instructions
+To use, simply search for a book using the form at the top of the page. Defaults to a keyword search but you can search by title, author, publisher, subject, or ISBN by selecting the appropriate option from the "refine your search" drop down menu.
+Search results will appear on submit of the form. To add a book to the shelf, click the + button.
+To remove a book from the shelf, click on the cover of the book you wish to remove.
+To print the shelf, click the print shelf button.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technologies Used
+- React
+- Tailwindcss
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Future Work
+- Dark/light mode
+- Add loading state/loading skeletons
