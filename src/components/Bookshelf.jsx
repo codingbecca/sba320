@@ -23,6 +23,7 @@ export default function Bookshelf({ bookshelf, dispatch }) {
       >
         {bookshelf.map((book) => (
           <div
+            className="cursor-pointer"
             onClick={() => handleClick(book)}
             key={book.id}
           >
