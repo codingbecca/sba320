@@ -6,6 +6,7 @@ body{
 
 .book{
   width: 130px;
+  min-height: 195px;
 }
 
 .bookshelf {
