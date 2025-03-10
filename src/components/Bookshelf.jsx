@@ -30,6 +30,7 @@ export default function Bookshelf({ bookshelf, dispatch }) {
             <Book
               thumbnail={book.volumeInfo.imageLinks?.thumbnail}
               title={book.volumeInfo.title}
+              authors={book.volumeInfo.authors}
             />
           </div>
         ))}
