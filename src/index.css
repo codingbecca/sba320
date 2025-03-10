@@ -4,6 +4,10 @@ body{
   background-color: aliceblue;
 }
 
+select option{
+  background-color: aliceblue;
+}
+
 .book{
   width: 130px;
   min-height: 195px;
@@ -20,4 +24,14 @@ body{
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    color: aliceblue;
+    background-color: #213547;
+  }
+  select option{
+    background-color: #213547;
+  }
 }

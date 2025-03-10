@@ -16,5 +16,4 @@ To print the shelf, click the print shelf button.
 - Tailwindcss
 
 ## Future Work
-- Dark/light mode
 - Add loading state/loading skeletons

@@ -18,21 +18,23 @@ export default function SearchBar(props) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    try {
-      const res = await axios.get(
-        `https://www.googleapis.com/books/v1/volumes?q=${searchRefinement}${encodeURIComponent(
-          searchTerm
-        )}`
-      );
-      setBooks(res.data.items);
-      setSearchQuery({
-        term: searchTerm,
-        refinement: searchRefinement,
-      });
-      setSearchTerm("");
-      setSearchRefinement("");
-    } catch (e) {
-      console.error(e);
+    if (searchTerm){
+      try {
+        const res = await axios.get(
+          `https://www.googleapis.com/books/v1/volumes?q=${searchRefinement}${encodeURIComponent(
+            searchTerm
+          )}`
+        );
+        setBooks(res.data.items);
+        setSearchQuery({
+          term: searchTerm,
+          refinement: searchRefinement,
+        });
+        setSearchTerm("");
+        setSearchRefinement("");
+      } catch (e) {
+        console.error(e);
+      }
     }
   };
 
